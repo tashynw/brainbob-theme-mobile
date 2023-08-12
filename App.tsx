@@ -22,7 +22,7 @@ function App(): JSX.Element {
         <StatusBar barStyle={'light-content'} />
       </SafeAreaView>
       <ScrollView w="100%">
-        <Box p={5}>
+        <Box p={5} bg="white">
           <Home />
         </Box>
       </ScrollView>
