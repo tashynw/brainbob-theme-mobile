@@ -12,6 +12,7 @@ import {
   SimpleGrid,
 } from 'native-base';
 import React from 'react';
+import {TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 type Props = {};
@@ -22,7 +23,9 @@ const Home = (props: Props) => {
       <HStack w="100%" alignItems="center">
         <HamburgerIcon size="lg" />
         <Spacer />
-        <Avatar>TW</Avatar>
+        <TouchableOpacity>
+          <Avatar>TW</Avatar>
+        </TouchableOpacity>
       </HStack>
       <VStack w="100%" alignItems="flex-start">
         <Heading size="2xl" fontWeight="md">
@@ -34,27 +37,33 @@ const Home = (props: Props) => {
       </VStack>
       <ScrollView horizontal={true} w="100%">
         <HStack w="100%" space={4}>
-          <Box borderRadius={60} bg="black" p={7} w="180px">
-            <Center>
-              <Heading size="md" fontWeight="bold" color="white">
-                Brainstorm
-              </Heading>
-            </Center>
-          </Box>
-          <Box borderRadius={60} bg="gray.200" p={7} w="180px">
-            <Center>
-              <Heading size="md" fontWeight="bold" color="black">
-                Books
-              </Heading>
-            </Center>
-          </Box>
-          <Box borderRadius={60} bg="gray.200" p={7} w="180px">
-            <Center>
-              <Heading size="md" fontWeight="bold">
-                Video
-              </Heading>
-            </Center>
-          </Box>
+          <TouchableOpacity>
+            <Box borderRadius={60} bg="black" p={7} w="180px">
+              <Center>
+                <Heading size="md" fontWeight="bold" color="white">
+                  Brainstorm
+                </Heading>
+              </Center>
+            </Box>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Box borderRadius={60} bg="gray.200" p={7} w="180px">
+              <Center>
+                <Heading size="md" fontWeight="bold" color="black">
+                  Books
+                </Heading>
+              </Center>
+            </Box>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Box borderRadius={60} bg="gray.200" p={7} w="180px">
+              <Center>
+                <Heading size="md" fontWeight="bold">
+                  Video
+                </Heading>
+              </Center>
+            </Box>
+          </TouchableOpacity>
         </HStack>
       </ScrollView>
       <Box w="100%" borderRadius={40} p={8} bg="purple.800">
@@ -62,12 +71,12 @@ const Home = (props: Props) => {
           <Heading size="xl" color="white" fontWeight="bold">
             Vocabulary
           </Heading>
-          <Heading size="md" color="white" fontWeight="light">
+          <Heading size="md" color="white" fontWeight="normal">
             Listen 20 new words
           </Heading>
           <Box borderRadius={20} p={4} bg="white" mt={6}>
             <HStack w="30%" alignItems="center">
-              <Heading size="sm" fontWeight="medium" fontSize="17px">
+              <Heading size="md" fontWeight="medium" fontSize="20px">
                 Start
               </Heading>
               <Spacer />
@@ -80,7 +89,7 @@ const Home = (props: Props) => {
         Recommended
       </Heading>
       <SimpleGrid columns={1} space={5} w="95%">
-        <Box borderRadius={20} bg="gray.200" p={6}>
+        <Box borderRadius={20} bg="gray.100" pr={10} pl={5} pt={4} pb={4}>
           <HStack w="100%" alignItems="center" justifyContent="space-between">
             <HStack space={3} w="100%" alignItems="center">
               <Box borderRadius={20} p={4} bg="pink.300">
@@ -89,7 +98,7 @@ const Home = (props: Props) => {
                 </Center>
               </Box>
               <VStack alignItems="flex-start" space={1}>
-                <Heading size="md" fontWeight="bold">
+                <Heading size="md" fontWeight="extrabold">
                   Chatting
                 </Heading>
                 <Heading size="sm" color="gray.600">
@@ -100,7 +109,7 @@ const Home = (props: Props) => {
             <Icon name="bookmark" size={22} color="gray" />
           </HStack>
         </Box>
-        <Box borderRadius={20} bg="gray.200" p={6}>
+        <Box borderRadius={20} bg="gray.100" pr={10} pl={5} pt={4} pb={4}>
           <HStack w="100%" alignItems="center" justifyContent="space-between">
             <HStack space={3} w="100%" alignItems="center">
               <Box borderRadius={20} p={4} bg="purple.800">
@@ -109,7 +118,7 @@ const Home = (props: Props) => {
                 </Center>
               </Box>
               <VStack alignItems="flex-start" space={1}>
-                <Heading size="md" fontWeight="bold">
+                <Heading size="md" fontWeight="extrabold">
                   Listening
                 </Heading>
                 <Heading size="sm" color="gray.600">
@@ -120,7 +129,7 @@ const Home = (props: Props) => {
             <Icon name="bookmark" size={22} color="gray" />
           </HStack>
         </Box>
-        <Box borderRadius={20} bg="gray.200" p={7}>
+        <Box borderRadius={20} bg="gray.100" pr={10} pl={5} pt={4} pb={4}>
           <HStack w="100%" alignItems="center">
             <HStack space={3} w="100%" alignItems="center">
               <Box borderRadius={20} p={4} bg="orange.400" w="60px">
@@ -129,7 +138,7 @@ const Home = (props: Props) => {
                 </Center>
               </Box>
               <VStack alignItems="flex-start" space={1}>
-                <Heading size="md" fontWeight="bold">
+                <Heading size="md" fontWeight="extrabold">
                   Speak
                 </Heading>
                 <Heading size="sm" color="gray.600">
